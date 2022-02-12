@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/887db070a2.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
   </head>
 
   <body>
@@ -26,7 +27,9 @@
         </div>
       <% end %>
       <%= render 'partial/navbar' if current_user %>
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
       <%= render 'partial/footer' %>
     </div>
   </body>
