@@ -1,7 +1,11 @@
 <div class="profile-wrap">
   <div class="row">
     <div class="col-md-4 text-center">
-      <%= image_tag avatar_url(@user), class: "round-img" %>
+      <% if @user.avatar? %>
+        <%= image_tag @user.avatar.url, class: "round-img" %>
+      <% else %>
+        <%= image_tag ("no-image.png"), class: "round-img" %>
+      <% end %>
     </div>
     <div class="col-md-8">
       <div class="row">
@@ -36,6 +40,38 @@
           </p>
         </div>
       <% end %>
+      <div class="row">
+        <p>
+          <%= simple_format @user.user_body %>
+        </p>
+      </div>
     </div>
   </div>
+</div>
+
+
+<div class="container-fluid row">
+  <% @user.posts.each do |post| %>
+    <div class="col-md-4 px-4">
+      <div class="card-wrap">
+        <div class="card">
+          <div class="card-header align-items-center d-flex">
+            <%= link_to post_path(post), class: "black-color no-text-decoration",
+              title: post.title do %>
+              <strong><%= post.title %></strong>
+            <% end %>
+            <% if post.user_id == current_user.id %>
+              <%= link_to post_path(post), method: :delete, class: "ml-auto mx-0 my-auto" do %>
+                <div class="delete-post-icon">
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+          <%= link_to(post_path(post)) do %>
+            <%= image_tag post.photos.first.image.url(:medium), class: "card-img-top" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

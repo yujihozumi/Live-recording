@@ -1,10 +1,12 @@
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
+  has_many :likes
+  has_many :comments
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable
-
+  mount_uploader :avatar, AvatarUploader
   # 登録する名前は必須、50文字以内
   validates :name, presence: true, length: { maximum: 50 }
 
