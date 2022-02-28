@@ -1,24 +1,21 @@
-# README
+# ライブの記録
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# 簡単な説明
+このアプリは自分が行ったライブ、フェスなどの思い出を残しておけるアプリとなっています。
 
-* Ruby version
+# 機能
+・deviseによるログイン機能  
+・ransackによる検索機能  
+・ユーザーの投稿にいいねができる機能  
+・ユーザーの投稿にコメントができる機能  
 
-* System dependencies
+# 使い方
+1, アプリを開き新規登録をします  
+2, 投稿画面で、タイトル、ライブの感想、アーティスト、会場、開催日、開演時間を入力し最後に写真を選択して投稿します。  
 
-* Configuration
+# 開発環境
+Ruby/Ruby on Rails/SQLite3/Visual Studio Code/
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 必要要件
+MacOs
