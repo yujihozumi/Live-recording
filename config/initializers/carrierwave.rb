@@ -2,9 +2,9 @@ unless Rails.env.development? || Rails.env.test?
   CarrierWave.configure do |config|
     config.fog_credentials = {
       provider: 'AWS',
-      aws_access_key_id: ENV['AKIAQH2KVTCKMWGXVZOE'],
-      aws_secret_access_key: ENV['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'],
-      region: ENV['ap-northeast-1']
+      aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+      region: ENV['AWS_DEFAULT_REGION']
     }
 
     config.fog_directory  = 'rails-photo-user'
