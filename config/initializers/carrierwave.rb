@@ -8,6 +8,8 @@ unless Rails.env.development? || Rails.env.test?
     }
 
     config.fog_directory  = 'rails-photo-user'
+    config.asset_host = 'https://s3-ap-northeast1.amazonaws.com/rails-photo-user'
+    config.asset_host = 'https://rails-photo-user.s3.amazonaws.com'
     config.cache_storage = :fog
     config.fog_public = false
   end
