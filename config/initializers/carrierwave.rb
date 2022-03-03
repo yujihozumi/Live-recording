@@ -9,6 +9,6 @@ unless Rails.env.development? || Rails.env.test?
 
     config.fog_directory  = 'rails-photo-user'
     config.cache_storage = :fog
-    config.fog_public = false 
+    config.fog_public = false
   end
 end
