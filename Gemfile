@@ -60,7 +60,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'carrierwave', '~> 2.0'
-gem 'fog'
+gem 'fog-aws'
 gem "mini_magick"
 gem "ransack"
 gem 'dotenv-rails'
